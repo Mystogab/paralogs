@@ -1,10 +1,14 @@
 {
   "name": "paralogs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Non-blocking parallel logger",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mystogab/paralogs.git"
   },
   "keywords": [
     "logger",

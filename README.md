@@ -52,5 +52,8 @@ Please feel free to fork this on github and send me your PRs
 
 ## Changelog
 
+### v0.1.1
+- Added GitHub repo (ya, could happen)
+
 ### v0.1
 - First Version of this awesome (you know is true) library
