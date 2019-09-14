@@ -41,9 +41,9 @@ That will show you:
 
 YES, objects are automagically converted to a happy strings. Happy strings are good for you
 
-The Paralog inactivity shoutdown message, means that internally, if you don't log anything the child process wild die, and feel sad because he couldn't do his job. Poor child.
+The Paralog inactivity shoutdown message, means that internally, if you don't log anything the child process will die, and feel sad because he couldn't do his job. Poor child.
 
-But don't worry about that, if you call some method like `.info('Hi!')` another child will born, to fulfill his dead brother mission, and maybe, just maybe win your heart.
+But don't worry about that, if you call some method like `.info('Hi!')` another child will born, to fulfill his dead brother destiny, and maybe, just maybe win your heart.
 
 ## Disclaimer
 I just really did this to archive some basic functionallity, in future versions I have plans to make it take some options (like change default colors) and other stuff like that. 
