@@ -52,6 +52,9 @@ Please feel free to fork this on github and send me your PRs
 
 ## Changelog
 
+### v0.1.2 [HOTFIX]
+- Added dirname references for forking. Now the module is working correct.
+
 ### v0.1.1
 - Added GitHub repo (ya, could happen)
 

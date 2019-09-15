@@ -1,6 +1,6 @@
 const { fork } = require('child_process');
 
-let logger = fork('logger.js');
+let logger = fork(__dirname + '/logger.js');
 
 //Helpers functions
 const isChildDead = () => !logger.connected;
