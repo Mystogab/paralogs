@@ -1,10 +1,11 @@
 const { fork } = require('child_process');
+const { join } = require('path');
 
-let logger = fork(__dirname + '/logger.js');
+let logger = fork(join(__dirname + '/logger.js'));
 
 //Helpers functions
 const isChildDead = () => !logger.connected;
-const haveAnotherChild = () => { logger =  fork('logger.js') };
+const haveAnotherChild = () => { logger = fork(join(__dirname + '/logger.js')) };
 
 //Base Logger
 const log = (message) => {

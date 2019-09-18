@@ -1,8 +1,8 @@
 const colors = require('./colors');
-let timeTtoDie = new Date().valueOf() + 1000 * 10;
+let timeTtoDie = new Date().valueOf() + 100 * 1;
 
 const resetTimeToDie = () => {
-  timeTtoDie = new Date().valueOf() + 1000 * 10;
+  timeTtoDie = new Date().valueOf() + 100 * 1;
 };
 
 const config = {
@@ -32,4 +32,4 @@ setInterval(() => {
     console.info('[ Paralog inactivity shutdown ]');
     process.exit();
   }
-}, 1000);
+}, 100);
