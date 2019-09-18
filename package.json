@@ -1,6 +1,6 @@
 {
   "name": "paralogs",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Non-blocking parallel logger",
   "main": "index.js",
   "scripts": {
