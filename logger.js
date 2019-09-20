@@ -9,7 +9,8 @@ const config = {
   colors: {
     info: colors.FgBlue,
     warn: colors.FgYellow,
-    error: colors.FgRed
+    error: colors.FgRed,
+    debug: colors.FgGreen
   }
 };
 

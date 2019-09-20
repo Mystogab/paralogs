@@ -33,3 +33,10 @@ module.exports.warn = async (body) => {
     body
   });
 };
+
+module.exports.debug = async (body) => {
+  log({
+    type: 'debug',
+    body
+  });
+};
