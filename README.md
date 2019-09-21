@@ -49,18 +49,86 @@ The Paralog inactivity shoutdown message, means that internally, if you don't lo
 
 But don't worry about that, if you call some function like `.info('Hi!')` another child will born, to fulfill his dead brother destiny, and maybe, just maybe win your heart.
 
+## Options (**NEW STUFF!!!**)
+I have some exiting news for you: OPTIONS. now when you import the library you can tell your preferences like this:
+```
+const log = require('paralogs');
+
+log.config(options); // YAY!
+```
+
+Where options is an object like this:
+```
+const options = {
+  logLevel: 'info',
+  timeToDie: 100,
+  colors: {
+    info: colors.FgBlue,
+    warn: colors.FgYellow,
+    error: colors.FgRed,
+    debug: colors.FgGreen
+  }
+```
+
+Lets see what does each option
+
+>**logLevel** `(string)`. As the name indicates it let you set the level for loggin, they are:
+
+- debug
+- info
+- warn
+- error
+
+It must be an string, and in order top to bottom it will log including all levels below. IE: if you set loglevel in `debug` you will see debug, info, warn and error. But if you set it on `warn` you will only see warn and error.
+
+>**timeToDie** `(number)`. It represent the time that our lovely logger child will wait with nothig to do to die. 
+
+It must be a number between 100 and 30000. Value expresed on milisencods.
+
+>**colors** `(Object)`. You can choose from a pre-defined colors for each kind of log which color you want. (YES I know you couldn't sleep waiting for this)
+
+This should be an object that every value of a key is an string AND is some of this options:
+
+ 'FgBlack',
+  'FgRed',
+  'FgGreen',
+  'FgYellow',
+  'FgBlue',
+  'FgMagenta',
+  'FgCyan',
+  'FgWhite',
+  'BgBlack',
+  'BgRed',
+  'BgGreen',
+  'BgYellow',
+  'BgBlue',
+  'BgMagenta',
+  'BgCyan',
+  'BgWhite'.
+
+I have not tested everyone but the Bg stands for Background and Fg for Foreground (letters color)
+
 ## Disclaimer
 I just really did this to archive some basic functionallity, in future versions I have plans to make it take some options (like change default colors) and other stuff like that. 
 
 Please feel free to fork this on github and send me your PRs
 
+## IMPORTANT
+In the new versions I will add some other options!
+
 ## About Amazon Web Services
 TL;DR: Don't use it.
 
-If your are planning to use this library on AWS Lambda for instance, AWS optimze this node for single process single thread, and also won't wait for event loop to be clean. (you won't see any logs, momento you do `return` momento your process die).
-Si this is (sadly) not usefull for your Lambdas.
+If your are planning to use this library on AWS Lambda for instance, AWS optimize their nodejs for single process single thread, and also won't wait for event loop to be clean. (you won't see any logs, moment you do `return` moment your process die).
+So this is (sadly) not usefull for your Lambdas.
 
 ## Changelog
+
+### v0.2 [**VERY HOT!**]
+- **New Feature**: Added `debug` option
+- **New Feature**: Added `options` parameter
+- No child is generated until log is needed
+- Fixed some typos
 
 ### v0.1.3
 - Some minnor fixes
