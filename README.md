@@ -63,10 +63,10 @@ const options = {
   logLevel: 'info',
   timeToDie: 100,
   colors: {
-    info: colors.FgBlue,
-    warn: colors.FgYellow,
-    error: colors.FgRed,
-    debug: colors.FgGreen
+    info: 'FgBlue',
+    warn: 'FgYellow',
+    error: 'FgRed',
+    debug: 'FgGreen'
   }
 ```
 
