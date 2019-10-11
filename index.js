@@ -98,6 +98,7 @@ const _validateOptions = (opt) => {
   } else {
     opt.colors = options.colors;
   }
+  if (opt.logMessageType === undefined)  opt.logMessageType = true;
 }
 
 //Base Logger
@@ -112,6 +113,7 @@ const log = (message) => {
 let options = {
   logLevel: 'info',
   timeToDie: 100,
+  logMessageType: true,
   colors: {
     info: colors.FgBlue,
     warn: colors.FgYellow,

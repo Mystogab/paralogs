@@ -8,7 +8,8 @@ let config = {
     debug: colors.FgGreen
   },
   timeToDie: 100,
-  logLevel: 'info'
+  logLevel: 'info',
+  logMessageType: true
 };
 
 let timeToDie = new Date().valueOf() + config.timeToDie;
@@ -35,8 +36,10 @@ const processMessage = (msg) => {
     if (typeof msg.body === 'object') {
       msg.body = JSON.stringify(msg.body, null, 2);
     };
+
+    const messageTypeTag = config.logMessageType ? `[${msg.type.toUpperCase()}]: ` : '';
   
-    console[msg.type](`${config.colors[msg.type]}%s\x1b[0m`, `[${msg.type.toUpperCase()}]: ${msg.body}`);
+    console[msg.type](`${config.colors[msg.type]}%s\x1b[0m`, `${messageTypeTag}${msg.body}`);
   };
 };
 

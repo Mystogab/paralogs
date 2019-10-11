@@ -62,6 +62,7 @@ Where options is an object like this:
 const options = {
   logLevel: 'info',
   timeToDie: 100,
+  logMessageType: true,
   colors: {
     info: 'FgBlue',
     warn: 'FgYellow',
@@ -71,6 +72,10 @@ const options = {
 ```
 
 Lets see what does each option
+
+>**logMessageType** `(Boolean)`
+
+When It's set to `true` it will show the type before the log ie: `[INFO]`. When it is set to `false` it wont be printed. Default: `true`
 
 >**logLevel** `(string)`. As the name indicates it let you set the level for loggin, they are:
 
@@ -114,15 +119,21 @@ I just really did this to archive some basic functionallity, in future versions 
 Please feel free to fork this on github and send me your PRs
 
 ## IMPORTANT
-In the new versions I will add some other options!
+In next version I will add a couple more options and then start working on code optimizations. Also pointing on amazon lambdas context support feature (may not be parallel but it **will** work.)
 
 ## About Amazon Web Services
-TL;DR: Don't use it.
+TL;DR: Don't use it YET.
+
+**NEWS**: I will be working on a sub-mode for this library in order to work on your lambdas! So **next versions will inlude Lambda support**!
 
 If your are planning to use this library on AWS Lambda for instance, AWS optimize their nodejs for single process single thread, and also won't wait for event loop to be clean. (you won't see any logs, moment you do `return` moment your process die).
-So this is (sadly) not usefull for your Lambdas.
+So this is (sadly) **by now** not usefull for your Lambdas.
 
 ## Changelog
+
+### v0.2.2
+- **New Feature**: Added `logMessageType` option!
+- Modified Readme with important news about AWS
 
 ### v0.2 [**VERY HOT!**]
 - **New Feature**: Added `debug` option
